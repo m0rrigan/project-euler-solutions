@@ -3,3 +3,17 @@
 # 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ...
 #
 # By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms.
+
+def even_sum(max)
+  sum = 0
+  a,b = 1,2
+  while (b < max)
+    if ( b % 2 == 0 )
+      sum += b
+    end
+    a,b = b, a+b
+  end
+  return sum
+end
+
+puts "The sum of even-valued terms is #{even_sum(4000000)}"
